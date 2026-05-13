@@ -1,0 +1,136 @@
+(EAG V3) C:\Users\DELL\OneDrive\Desktop\EAG V3\Assignment-4-MCP_Paint_App>python main.py
+C:\Users\DELL\OneDrive\Desktop\EAG V3\Assignment-4-MCP_Paint_App\llm\gemini_client.py:1: FutureWarning:
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+Enter task: Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:16,096 [INFO] ============================================================
+2026-05-14 01:13:16,096 [INFO] AGENT STARTED
+2026-05-14 01:13:16,097 [INFO] Task: Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:16,097 [INFO] ============================================================
+2026-05-14 01:13:16,098 [INFO]
+2026-05-14 01:13:16,098 [INFO] --- STEP 1 ---
+2026-05-14 01:13:16,099 [INFO] History so far: 0 action(s) completed
+2026-05-14 01:13:16,099 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:16,100 [INFO] [LLM] Prompt sent to Gemini (step 1):
+2026-05-14 01:13:16,100 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:16,100 [INFO] [LLM]   Actions so far  : 0
+2026-05-14 01:13:18,167 [INFO] [LLM] Response received in 2.07s
+2026-05-14 01:13:18,168 [INFO] [LLM] Raw response:
+{"action": "open_paint"}
+2026-05-14 01:13:18,169 [INFO] [PARSE] Action: 'open_paint'  |  Full JSON: {'action': 'open_paint'}
+2026-05-14 01:13:18,170 [INFO] [TOOL] Executing: 'open_paint'
+2026-05-14 01:13:18,171 [INFO] Opening Paint
+2026-05-14 01:13:22,696 [INFO] [TOOL] 'open_paint' completed in 4.53s  |  Result: Paint opened
+2026-05-14 01:13:22,697 [INFO]
+2026-05-14 01:13:22,698 [INFO] --- STEP 2 ---
+2026-05-14 01:13:22,698 [INFO] History so far: 1 action(s) completed
+2026-05-14 01:13:22,699 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:22,700 [INFO] [LLM] Prompt sent to Gemini (step 2):
+2026-05-14 01:13:22,702 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:22,703 [INFO] [LLM]   Actions so far  : 1
+2026-05-14 01:13:22,704 [INFO] [LLM]   Last action     : {'action': 'open_paint'}
+2026-05-14 01:13:22,704 [INFO] [LLM]   Last result     : Paint opened
+2026-05-14 01:13:23,647 [INFO] [LLM] Response received in 0.95s
+2026-05-14 01:13:23,648 [INFO] [LLM] Raw response:
+{"action": "draw_rectangle"}
+2026-05-14 01:13:23,650 [INFO] [PARSE] Action: 'draw_rectangle'  |  Full JSON: {'action': 'draw_rectangle'}
+2026-05-14 01:13:23,652 [INFO] [TOOL] Executing: 'draw_rectangle'
+2026-05-14 01:13:23,654 [INFO] Drawing rectangle
+2026-05-14 01:13:24,702 [INFO] Clicked UIA ListItem: 'Rectangle'
+2026-05-14 01:13:29,695 [INFO] [TOOL] 'draw_rectangle' completed in 6.04s  |  Result: Rectangle drawn
+2026-05-14 01:13:29,696 [INFO]
+2026-05-14 01:13:29,698 [INFO] --- STEP 3 ---
+2026-05-14 01:13:29,703 [INFO] History so far: 2 action(s) completed
+2026-05-14 01:13:29,705 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:29,709 [INFO] [LLM] Prompt sent to Gemini (step 3):
+2026-05-14 01:13:29,714 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:29,715 [INFO] [LLM]   Actions so far  : 2
+2026-05-14 01:13:29,716 [INFO] [LLM]   Last action     : {'action': 'draw_rectangle'}
+2026-05-14 01:13:29,718 [INFO] [LLM]   Last result     : Rectangle drawn
+2026-05-14 01:13:31,225 [INFO] [LLM] Response received in 1.52s
+2026-05-14 01:13:31,225 [INFO] [LLM] Raw response:
+{"action": "set_color", "color_name": "yellow"}
+2026-05-14 01:13:31,231 [INFO] [PARSE] Action: 'set_color'  |  Full JSON: {'action': 'set_color', 'color_name': 'yellow'}
+2026-05-14 01:13:31,232 [INFO] [TOOL] Executing: 'set_color'
+2026-05-14 01:13:31,235 [INFO] Setting foreground color to 'yellow' (R=255, G=255, B=0)
+2026-05-14 01:13:32,319 [INFO] Clicked UIA Button: 'Edit colors'
+2026-05-14 01:13:34,934 [INFO] Foreground color set to 'yellow' (R=255, G=255, B=0)
+2026-05-14 01:13:34,935 [INFO] [TOOL] 'set_color' completed in 3.70s  |  Result: Color set to 'yellow' (R=255, G=255, B=0)
+2026-05-14 01:13:34,939 [INFO]
+2026-05-14 01:13:34,945 [INFO] --- STEP 4 ---
+2026-05-14 01:13:34,947 [INFO] History so far: 3 action(s) completed
+2026-05-14 01:13:34,949 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:34,952 [INFO] [LLM] Prompt sent to Gemini (step 4):
+2026-05-14 01:13:34,954 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:34,958 [INFO] [LLM]   Actions so far  : 3
+2026-05-14 01:13:34,965 [INFO] [LLM]   Last action     : {'action': 'set_color', 'color_name': 'yellow'}
+2026-05-14 01:13:34,966 [INFO] [LLM]   Last result     : Color set to 'yellow' (R=255, G=255, B=0)
+2026-05-14 01:13:36,141 [INFO] [LLM] Response received in 1.19s
+2026-05-14 01:13:36,142 [INFO] [LLM] Raw response:
+{"action": "fill_color", "x": 500, "y": 425}
+2026-05-14 01:13:36,148 [INFO] [PARSE] Action: 'fill_color'  |  Full JSON: {'action': 'fill_color', 'x': 500, 'y': 425}
+2026-05-14 01:13:36,149 [INFO] [TOOL] Executing: 'fill_color'
+2026-05-14 01:13:36,152 [INFO] Filling region at (500, 425) with current foreground color
+2026-05-14 01:13:37,339 [INFO] Clicked UIA Button: 'Fill with color'
+2026-05-14 01:13:37,945 [INFO] Flood-fill applied at (500, 425)
+2026-05-14 01:13:38,446 [INFO] [TOOL] 'fill_color' completed in 2.29s  |  Result: Color filled at (500, 425)
+2026-05-14 01:13:38,447 [INFO]
+2026-05-14 01:13:38,451 [INFO] --- STEP 5 ---
+2026-05-14 01:13:38,454 [INFO] History so far: 4 action(s) completed
+2026-05-14 01:13:38,457 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:38,461 [INFO] [LLM] Prompt sent to Gemini (step 5):
+2026-05-14 01:13:38,463 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:38,466 [INFO] [LLM]   Actions so far  : 4
+2026-05-14 01:13:38,467 [INFO] [LLM]   Last action     : {'action': 'fill_color', 'x': 500, 'y': 425}
+2026-05-14 01:13:38,469 [INFO] [LLM]   Last result     : Color filled at (500, 425)
+2026-05-14 01:13:39,465 [INFO] [LLM] Response received in 1.00s
+2026-05-14 01:13:39,467 [INFO] [LLM] Raw response:
+{"action": "add_text", "text": "Hello"}
+2026-05-14 01:13:39,472 [INFO] [PARSE] Action: 'add_text'  |  Full JSON: {'action': 'add_text', 'text': 'Hello'}
+2026-05-14 01:13:39,483 [INFO] [TOOL] Executing: 'add_text'
+2026-05-14 01:13:39,485 [INFO] Writing text: Hello
+2026-05-14 01:13:39,791 [INFO] Setting foreground color to 'black' (R=0, G=0, B=0)
+2026-05-14 01:13:40,969 [INFO] Clicked UIA Button: 'Edit colors'
+2026-05-14 01:13:43,601 [INFO] Foreground color set to 'black' (R=0, G=0, B=0)
+2026-05-14 01:13:44,520 [INFO] Clicked UIA Button: 'Text'
+2026-05-14 01:13:49,429 [INFO] [TOOL] 'add_text' completed in 9.94s  |  Result: Text added: Hello
+2026-05-14 01:13:49,430 [INFO]
+2026-05-14 01:13:49,434 [INFO] --- STEP 6 ---
+2026-05-14 01:13:49,437 [INFO] History so far: 5 action(s) completed
+2026-05-14 01:13:49,438 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:49,439 [INFO] [LLM] Prompt sent to Gemini (step 6):
+2026-05-14 01:13:49,440 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:49,441 [INFO] [LLM]   Actions so far  : 5
+2026-05-14 01:13:49,443 [INFO] [LLM]   Last action     : {'action': 'add_text', 'text': 'Hello'}
+2026-05-14 01:13:49,444 [INFO] [LLM]   Last result     : Text added: Hello
+2026-05-14 01:13:50,680 [INFO] [LLM] Response received in 1.24s
+2026-05-14 01:13:50,681 [INFO] [LLM] Raw response:
+{"action": "save_image"}
+2026-05-14 01:13:50,684 [INFO] [PARSE] Action: 'save_image'  |  Full JSON: {'action': 'save_image'}
+2026-05-14 01:13:50,692 [INFO] [TOOL] Executing: 'save_image'
+2026-05-14 01:13:50,703 [INFO] Saving image to: output_image.png
+2026-05-14 01:13:56,992 [INFO] Image saved to output_image.png
+2026-05-14 01:13:56,993 [INFO] [TOOL] 'save_image' completed in 6.30s  |  Result: Image saved to output_image.png
+2026-05-14 01:13:56,995 [INFO]
+2026-05-14 01:13:56,998 [INFO] --- STEP 7 ---
+2026-05-14 01:13:56,999 [INFO] History so far: 6 action(s) completed
+2026-05-14 01:13:57,000 [INFO] [LLM] Sending task + history to Gemini...
+2026-05-14 01:13:57,001 [INFO] [LLM] Prompt sent to Gemini (step 7):
+2026-05-14 01:13:57,003 [INFO] [LLM]   Task            : Open Paint, draw a rectangle, fill the inside of the rectangle with Yellow color, write "Hello" inside it and save the image
+2026-05-14 01:13:57,007 [INFO] [LLM]   Actions so far  : 6
+2026-05-14 01:13:57,012 [INFO] [LLM]   Last action     : {'action': 'save_image'}
+2026-05-14 01:13:57,013 [INFO] [LLM]   Last result     : Image saved to output_image.png
+2026-05-14 01:13:58,671 [INFO] [LLM] Response received in 1.67s
+2026-05-14 01:13:58,672 [INFO] [LLM] Raw response:
+{"action": "finish"}
+2026-05-14 01:13:58,676 [INFO] [PARSE] Action: 'finish'  |  Full JSON: {'action': 'finish'}
+2026-05-14 01:13:58,679 [INFO]
+2026-05-14 01:13:58,683 [INFO] ============================================================
+2026-05-14 01:13:58,686 [INFO] AGENT FINISHED after 7 step(s)
+2026-05-14 01:13:58,688 [INFO] ============================================================

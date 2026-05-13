@@ -4,6 +4,12 @@ An AI agent that autonomously controls **Microsoft Paint** using Google Gemini a
 
 ---
 
+## Demo
+
+[![MCP Paint Agent Demo](https://img.youtube.com/vi/dpLLvs2DJiA/0.jpg)](https://youtu.be/dpLLvs2DJiA)
+
+---
+
 ## Architecture
 
 ```
